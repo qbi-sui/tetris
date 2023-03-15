@@ -7,7 +7,7 @@ common:
   time_disp: False
   #### 推論用Weight
   # File 指定
-  predict_weight: OutputWeight/best_weight.pt
+  predict_weight: outputs/YYYY-MM-DD-hh-mm-ss/trained_model/best_weight.pt
 
   #### 第2model 有効
   weight2_available: False
