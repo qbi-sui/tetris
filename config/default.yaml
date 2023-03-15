@@ -7,7 +7,7 @@ common:
   time_disp: False
   #### 推論用Weight
   # File 指定
-  predict_weight: outputs/YYYY-MM-DD-hh-mm-ss/trained_model/best_weight.pt
+  predict_weight: OutputWeight/best_weight.pt
 
   #### 第2model 有効
   weight2_available: False
@@ -47,9 +47,9 @@ train:
 
   reward_list: #These parameter are not normalized. 消去報酬の配分
     - 0  #survival
-    - 500 #0 #1block
-    - 1500 #2block
-    - 5000 #3block
+    - 300 #0 #1block
+    - 1200 #2block
+    - 4000 #3block
     - 10000 #4block
     - -10000 #game over
   height_line_reward: 3 #低いところの消去ほど有効とする設定(10000 くらいでほぼ無効 大きい値ほど報酬小さい)
