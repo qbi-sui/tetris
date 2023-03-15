@@ -1827,6 +1827,7 @@ class Block_Controller(object):
             # 2: 3番目 Y軸降下 (-1: で Drop)
             # 3: 4番目 テトリミノ回転 (Next Turn)
             # 4: 5番目 X軸移動 (Next Turn)
+            # 5: HOLD
             action = next_actions[index]
 
             ###############################################
@@ -1842,8 +1843,9 @@ class Block_Controller(object):
 
             # print(action[5])
 
+
             if action[5] == 1:
-                nextMove["strategy"]["use_hold_function"] = "n"
+                nextMove["strategy"]["use_hold_function"] = "y"
             ###########
             # Drop Down 落下の場合
             if action[2] == -1 and action[3] == -1 and action[4] == -1:
